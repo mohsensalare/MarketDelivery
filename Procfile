@@ -1,0 +1,1 @@
+web: gunicorn MarketDelivery.wsgi --preload

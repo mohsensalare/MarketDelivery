@@ -1,0 +1,47 @@
+{% extends "shared/base2.html" %}
+{% load static%}
+{% block header %}
+    <link rel="stylesheet" href="{% static 'style/pagination.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="mm">
+    <div class="view">
+      <div class="content">
+
+        <!-- pagination&content -->
+        <div class="element">
+        {% for product in page_obj %}
+            <div class="be-1">
+            <div class="bePart1">
+              <img src="{{ product.image.url }}" alt="" class="be-img">
+              <p class="be-p">{{ product.title }} - {{ product.description }}</p>
+            </div>
+            <div class="bePart2">
+              <p class="be-p2">$ {{ product.price }}</p>
+              <button class="be-btn"><a href="{{ product.get_absolute_url }}">Details</a></button>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+    <nav aria-label="...">
+        <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+        </li>
+        {% endif %}
+        <li class="page-item active" aria-current="page">
+            <a class="page-link" >Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a>
+        </li>
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+        </li>
+        {% endif %}
+        </ul>
+    </nav>
+  </div>
+{% endblock %}

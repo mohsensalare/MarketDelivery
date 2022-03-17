@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delivery shop</title>
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Attach Bootstrap CSS only -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    {% block hreders %}{% endblock %}
+    <link href="{% static 'css/product.css'%}" rel="stylesheet">
+    <link href="{% static 'css/new.css' %}" rel="stylesheet">
+</head>
+<body>
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="/" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="/">home</a>
+    <a class="py-2 d-none d-md-inline-block" href="{% url "supermarket:list-products" %}">Products List</a>
+    {% if user.is_authenticated %}
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'order:basket' %}">Basket</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'accounts:log-out' %}">logout</a>
+      {% else %}
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'accounts:login' %}">login</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">register</a>
+    {% endif %}
+  </nav>
+</header>
+<div class="container">
+    {% if messages %}
+        {% for msg in messages %}
+            <p class="alert alert-{{ msg.tags }}">{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+{% block content %}
+
+{% endblock %}
+</div>
+</body>
+</html>

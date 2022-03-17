@@ -1,0 +1,27 @@
+{% extends 'shared/base2.html' %}
+{% load static%}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'style/Home.css' %}">
+    <link rel="stylesheet" href="{% static 'style/Product.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="inside-body">
+    <header class="header">
+      <h4>LIST OF BRANCHES</h4>
+    </header>
+    <div class="container">
+        {% for three_branch in supermarkets %}
+        <div class="first-section">
+        {% for super_market in three_branch %}
+            <div>
+                <a class="cat-2" href="{% url 'supermarket:list-products-slug' slug="supermarket_category" smid=super_market.id %}"><img src="{{ super_market.banner.url }}" alt="{{ super_market.name }}" class="bean"></a>
+                <h5 style="margin-top: 5%" class="text-center"><a href="{% url 'supermarket:list-products-slug' slug="supermarket_category" smid=super_market.id %}" style="color: white;">{{ super_market.name }} - {{ super_market.address }}</a></h5>
+            </div>
+        {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

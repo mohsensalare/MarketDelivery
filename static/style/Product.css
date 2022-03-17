@@ -1,0 +1,201 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #092756;
+  background: -moz-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, 0.4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -moz-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4)
+          100%),
+    -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, 0.4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -webkit-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(
+            42,
+            60,
+            87,
+            0.4
+          )
+          100%),
+    -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -o-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, 0.4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -o-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4)
+          100%),
+    -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -ms-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, 0.4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    -ms-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4)
+          100%),
+    -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(
+      0% 100%,
+      ellipse cover,
+      rgba(104, 128, 138, 0.4) 10%,
+      rgba(138, 114, 76, 0) 40%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(57, 173, 219, 0.25) 0%,
+      rgba(42, 60, 87, 0.4) 100%
+    ),
+    linear-gradient(135deg, #670d10 0%, #092756 100%);
+    overflow: hidden;
+}
+.logo-home {
+  height: 5vh;
+  width: 3vw;
+}
+.header{
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+h4 {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items:center;
+  color: #ffffff;
+  font-family: "ProximaNovaBold";
+  line-height: 58px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.inside-body{
+
+   height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+} 
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  
+}
+.first-section {
+  height: 40vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+.second-section {
+  height: 40vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+.third-section {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: crimson;
+}
+
+.cat-1 {
+  display: flex;
+  height: 30vh;
+  width: 23vw;
+  border: none;
+  background-color: #e6e8eb;
+  border-radius: 12px;
+  box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+  -moz-box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+  -moz-box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+}
+.cat-2 {
+  display: flex;
+  height: 30vh;
+  width: 23vw;
+  border: none;
+  background-color: #e6e8eb;
+  border-radius: 12px;
+  box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+  -moz-box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+  -moz-box-shadow: 5px 5px 8px #cbced1, 4px -4px 4px #ffffff;
+}
+.footer-home{
+    height: 8vh;
+    width: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    /* margin-bottom: 0; */
+    position: relative;
+    color: #ffffff;
+    margin-top: 11vh;
+}
+.bean{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.food{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.dairy{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.washer{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.beauty{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.veg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}

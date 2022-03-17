@@ -1,0 +1,37 @@
+{% extends 'shared/base2.html' %}
+{% load static%}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'style/Home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container card">
+    <h3 class="text-center">
+        {{ toDay }}
+    </h3>
+
+    <table class="table table-striped text-center align-items-center">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Product</th>
+          <th scope="col">Count</th>
+          <th scope="col">Address</th>
+          <th scope="col">Deliver Time</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for order in order_list %}
+          <tr>
+            <td>{{ order.id}}</td>
+            <td><a href="{{ order.product.get_absolute_url }}">{{ order.product.title }}</a></td>
+            <td>{{ order.count }}</td>
+            <td>{{ order.order.address }}</td>
+            <td>{{ order.order.user_selected_delivery_time }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+    </div>
+{% endblock %}
